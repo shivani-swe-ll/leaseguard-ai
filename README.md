@@ -6,7 +6,7 @@
 
 **An AI agent that reads a rental lease and flags clauses that are likely not allowed under Ontario's Residential Tenancies Act (RTA). Every finding cites the rule and the section it comes from.**
 
-**Live demo:** https://leaseguard-ai.streamlit.app
+**Live demo:** https://leaseguardai.streamlit.app/
 
 > ⚠️ This is a portfolio project, not legal advice. The rules are plain-language summaries. For real problems, contact the Landlord and Tenant Board, a community legal clinic, or a lawyer.
 
