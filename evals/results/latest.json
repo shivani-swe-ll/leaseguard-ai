@@ -1,0 +1,290 @@
+{
+  "timestamp": "2026-11-11T15:34:54",
+  "llm": "off (rules + retrieval only)",
+  "rules": 32,
+  "retrieval_clauses": {
+    "bm25": {
+      "hit@1": 0.829,
+      "hit@3": 0.927,
+      "mrr": 0.894
+    },
+    "vector": {
+      "hit@1": 0.854,
+      "hit@3": 0.927,
+      "mrr": 0.898
+    },
+    "hybrid": {
+      "hit@1": 0.854,
+      "hit@3": 0.927,
+      "mrr": 0.906
+    },
+    "hybrid_rerank": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0
+    }
+  },
+  "retrieval_questions": {
+    "bm25": {
+      "hit@1": 0.867,
+      "hit@3": 1.0,
+      "mrr": 0.933
+    },
+    "vector": {
+      "hit@1": 0.933,
+      "hit@3": 1.0,
+      "mrr": 0.967
+    },
+    "hybrid": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0
+    },
+    "hybrid_rerank": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0
+    }
+  },
+  "clauses": {
+    "n": 45,
+    "accuracy": 0.822,
+    "flagged": {
+      "precision": 0.871,
+      "recall": 1.0,
+      "f1": 0.931
+    },
+    "likely_void": {
+      "precision": 1.0,
+      "recall": 0.833,
+      "f1": 0.909
+    },
+    "methods": {
+      "trigger": 30,
+      "retrieval": 9,
+      "check": 1,
+      "none": 5
+    },
+    "confusion": {
+      "LIKELY_VOID->LIKELY_VOID": 20,
+      "LIKELY_VOID->REVIEW": 4,
+      "OK->OK": 14,
+      "OK->REVIEW": 4,
+      "REVIEW->REVIEW": 3
+    },
+    "misses": [
+      {
+        "id": "c07",
+        "expected": "LIKELY_VOID",
+        "got": "REVIEW",
+        "rule": "R16",
+        "expected_rule": "R16",
+        "method": "retrieval",
+        "ok": false
+      },
+      {
+        "id": "c10",
+        "expected": "LIKELY_VOID",
+        "got": "REVIEW",
+        "rule": "R12",
+        "expected_rule": "R12",
+        "method": "retrieval",
+        "ok": false
+      },
+      {
+        "id": "c16",
+        "expected": "LIKELY_VOID",
+        "got": "REVIEW",
+        "rule": "R01",
+        "expected_rule": "R01",
+        "method": "retrieval",
+        "ok": false
+      },
+      {
+        "id": "c19",
+        "expected": "LIKELY_VOID",
+        "got": "REVIEW",
+        "rule": "R04",
+        "expected_rule": "R04",
+        "method": "retrieval",
+        "ok": false
+      },
+      {
+        "id": "c36",
+        "expected": "OK",
+        "got": "REVIEW",
+        "rule": "R11",
+        "expected_rule": null,
+        "method": "retrieval",
+        "ok": false
+      },
+      {
+        "id": "c38",
+        "expected": "OK",
+        "got": "REVIEW",
+        "rule": "R01",
+        "expected_rule": null,
+        "method": "retrieval",
+        "ok": false
+      },
+      {
+        "id": "c41",
+        "expected": "OK",
+        "got": "REVIEW",
+        "rule": "R12",
+        "expected_rule": "R12",
+        "method": "retrieval",
+        "ok": false
+      },
+      {
+        "id": "c44",
+        "expected": "OK",
+        "got": "REVIEW",
+        "rule": "R14",
+        "expected_rule": "R14",
+        "method": "retrieval",
+        "ok": false
+      }
+    ]
+  },
+  "clauses_holdout": {
+    "n": 15,
+    "accuracy": 0.533,
+    "flagged": {
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.75
+    },
+    "likely_void": {
+      "precision": 1.0,
+      "recall": 0.222,
+      "f1": 0.364
+    },
+    "methods": {
+      "trigger": 4,
+      "none": 6,
+      "retrieval": 4,
+      "check": 1
+    },
+    "confusion": {
+      "LIKELY_VOID->LIKELY_VOID": 2,
+      "LIKELY_VOID->OK": 4,
+      "LIKELY_VOID->REVIEW": 3,
+      "OK->OK": 5,
+      "REVIEW->REVIEW": 1
+    },
+    "misses": [
+      {
+        "id": "h02",
+        "expected": "LIKELY_VOID",
+        "got": "OK",
+        "rule": null,
+        "expected_rule": "R03",
+        "method": "none",
+        "ok": false
+      },
+      {
+        "id": "h03",
+        "expected": "LIKELY_VOID",
+        "got": "OK",
+        "rule": null,
+        "expected_rule": "R08",
+        "method": "none",
+        "ok": false
+      },
+      {
+        "id": "h04",
+        "expected": "LIKELY_VOID",
+        "got": "REVIEW",
+        "rule": "R14",
+        "expected_rule": "R14",
+        "method": "retrieval",
+        "ok": false
+      },
+      {
+        "id": "h05",
+        "expected": "LIKELY_VOID",
+        "got": "REVIEW",
+        "rule": "R10",
+        "expected_rule": "R10",
+        "method": "retrieval",
+        "ok": false
+      },
+      {
+        "id": "h06",
+        "expected": "LIKELY_VOID",
+        "got": "OK",
+        "rule": "A09",
+        "expected_rule": "R18",
+        "method": "trigger",
+        "ok": false
+      },
+      {
+        "id": "h07",
+        "expected": "LIKELY_VOID",
+        "got": "REVIEW",
+        "rule": "R12",
+        "expected_rule": "R12",
+        "method": "retrieval",
+        "ok": false
+      },
+      {
+        "id": "h14",
+        "expected": "LIKELY_VOID",
+        "got": "OK",
+        "rule": null,
+        "expected_rule": "R16",
+        "method": "none",
+        "ok": false
+      }
+    ]
+  },
+  "qa": {
+    "answers": 15,
+    "right_source": 1.0,
+    "faithfulness": 1.0,
+    "refusals": 3,
+    "correct_refusals": 1.0,
+    "misses": []
+  },
+  "leases": {
+    "fair_lease.txt": {
+      "flagged": [],
+      "missed": [],
+      "false_alarms": []
+    },
+    "problem_lease.txt": {
+      "flagged": [
+        "1",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "missed": [],
+      "false_alarms": []
+    },
+    "mixed_lease.pdf": {
+      "flagged": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "10",
+        "11"
+      ],
+      "missed": [],
+      "false_alarms": []
+    },
+    "recall": 1.0,
+    "precision": 1.0
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_note": "Golden questions. 'rules' = acceptable rule ids for the top source (any of them). 'abstain': true = the system should refuse (out of scope or not covered).",
+  "questions": [
+    {"id": "q01", "q": "Can my landlord ask for a damage deposit?", "rules": ["R05"]},
+    {"id": "q02", "q": "Is a no pets clause legal in Ontario?", "rules": ["R03"]},
+    {"id": "q03", "q": "How much notice does my landlord need before coming into my apartment?", "rules": ["R14", "A07"]},
+    {"id": "q04", "q": "Can my landlord charge me a late fee?", "rules": ["R08"]},
+    {"id": "q05", "q": "How often can rent go up?", "rules": ["R18"]},
+    {"id": "q06", "q": "Do I have to give post-dated cheques?", "rules": ["R10"]},
+    {"id": "q07", "q": "My lease ended, do I have to move out?", "rules": ["R16"]},
+    {"id": "q08", "q": "Can I sublet my apartment?", "rules": ["R19", "A10"]},
+    {"id": "q09", "q": "Who pays for repairs to the fridge?", "rules": ["R12"]},
+    {"id": "q10", "q": "Can my landlord turn off the heat?", "rules": ["R13"]},
+    {"id": "q11", "q": "How much notice do I give to end my monthly tenancy?", "rules": ["R17", "A09"]},
+    {"id": "q12", "q": "Is a key deposit allowed?", "rules": ["R07"]},
+    {"id": "q13", "q": "My cheque bounced, how much can they charge?", "rules": ["R09"]},
+    {"id": "q14", "q": "Do I get interest on my last month's rent deposit?", "rules": ["R06"]},
+    {"id": "q15", "q": "Can my landlord keep my stuff if I owe rent?", "rules": ["R20"]},
+    {"id": "q16", "q": "What are the rules for commercial leases in Ontario?", "abstain": true},
+    {"id": "q17", "q": "How do I evict a tenant in British Columbia?", "abstain": true},
+    {"id": "q18", "q": "What is the best pizza in Toronto?", "abstain": true}
+  ]
+}

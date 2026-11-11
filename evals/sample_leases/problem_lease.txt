@@ -1,0 +1,36 @@
+SAMPLE LEASE FOR TESTING - NOT A REAL LEASE. All names, addresses and amounts are made up.
+
+APARTMENT RENTAL CONTRACT
+
+Landlord: J. Example
+Tenant: Sam Placeholder
+Premises: Basement apartment, 12 Sample Road, Mississauga, Ontario
+Term: one year from May 1, 2026
+
+1. This contract replaces the Ontario Standard Form of Lease.
+
+2. Rent is $1,900 per month, payable on the 1st.
+
+3. At signing, the tenant pays first and last month's rent plus a damage deposit of $1,500.
+
+4. A late fee of $15 per day applies to any rent received after the 1st.
+
+5. The tenant must provide twelve post-dated cheques before moving in.
+
+6. No pets are allowed. A pet found in the unit will lead to immediate eviction.
+
+7. The tenant is responsible for all repairs and maintenance, including appliances and plumbing.
+
+8. The landlord may enter the apartment at any time to inspect it.
+
+9. The landlord may increase the rent every six months.
+
+10. The tenant must move out at the end of the one-year term.
+
+11. Subletting is not permitted under any circumstances.
+
+12. If rent is unpaid for 10 days, the landlord may change the locks and keep the tenant's belongings until rent is paid.
+
+13. A non-refundable lease preparation fee of $300 is due at signing.
+
+14. The tenant waives any rights under the Residential Tenancies Act that conflict with this contract.

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leaseguard-ai"
+version = "0.1.0"
+description = "AI assistant that checks Ontario rental leases against tenant law, with hybrid RAG, citations and evals"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Shivani Anghan" }]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "pydantic>=2.5", "python-dotenv>=1.0", "pypdf>=4.0"]
+
+[project.optional-dependencies]
+ui = ["streamlit>=1.40"]
+api = ["fastapi>=0.110", "uvicorn[standard]>=0.29"]
+dev = ["pytest>=8", "fastapi>=0.110", "httpx>=0.27"]
+
+[project.scripts]
+leaseguard = "leaseguard.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["leaseguard*"]
+
+[tool.setuptools.package-data]
+leaseguard = ["knowledge/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

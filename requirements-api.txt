@@ -1,0 +1,7 @@
+# Only for the FastAPI server (Docker uses this)
+numpy>=1.26
+pydantic>=2.6
+python-dotenv>=1.0
+pypdf>=4.0
+fastapi>=0.110
+uvicorn[standard]>=0.29

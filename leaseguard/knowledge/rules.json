@@ -1,0 +1,836 @@
+{
+  "_note": "Plain-language summaries of Ontario residential tenancy rules, written for this project. They are NOT the official text and NOT legal advice. Official law: Residential Tenancies Act, 2006 (S.O. 2006, c. 17) and O. Reg. 516/06 at ontario.ca/laws. Last reviewed: November 2026.",
+  "rules": [
+    {
+      "id": "R01",
+      "title": "You cannot sign away your rights",
+      "section": "RTA s. 3, s. 4",
+      "category": "general",
+      "clause_verdict": "LIKELY_VOID",
+      "summary": "The Residential Tenancies Act applies even if the lease says it does not. Any lease term that conflicts with the Act, or says the tenant gives up rights under the Act, is void and cannot be enforced.",
+      "tenant_tip": "You keep all your rights under the Act, even if you signed a lease that says otherwise.",
+      "keywords": [
+        "waive",
+        "rights",
+        "not governed",
+        "despite the act",
+        "contract out",
+        "void",
+        "conflict with act"
+      ],
+      "triggers": [
+        "waive[sd]?\\b.{0,60}\\b(rights?|act|protections?)",
+        "(not|never)\\s+(be\\s+)?(covered|governed|protected)\\s+by\\s+the\\s+residential\\s+tenancies",
+        "despite\\s+(anything\\s+in\\s+)?the\\s+residential\\s+tenancies\\s+act",
+        "contract(s|ing)?\\s+out\\s+of"
+      ],
+      "exclude": [],
+      "examples": [
+        "The Tenant waives all rights under the Residential Tenancies Act.",
+        "This agreement is not governed by the Residential Tenancies Act and the tenant agrees to give up any protections."
+      ]
+    },
+    {
+      "id": "R02",
+      "title": "Most leases must use the Ontario Standard Form of Lease",
+      "section": "RTA s. 12.1",
+      "category": "general",
+      "clause_verdict": "REVIEW",
+      "summary": "For most residential tenancies that started on or after April 30, 2018, the landlord must use Ontario's Standard Form of Lease. If the landlord does not give one, the tenant can ask for it in writing. If the landlord still does not provide it within 21 days, the tenant may withhold one month's rent.",
+      "tenant_tip": "Ask your landlord in writing for the Standard Form of Lease if you did not get one.",
+      "keywords": [
+        "standard form of lease",
+        "standard lease",
+        "written lease",
+        "form 2229E",
+        "no lease"
+      ],
+      "triggers": [
+        "(instead\\s+of|replaces?|rather\\s+than)\\s+the\\s+(ontario\\s+)?standard\\s+(form\\s+of\\s+)?lease",
+        "not\\s+(to\\s+)?(use|using|be\\s+on)\\s+the\\s+(ontario\\s+)?standard\\s+(form\\s+of\\s+)?lease"
+      ],
+      "exclude": [],
+      "examples": [
+        "This private agreement replaces the Ontario Standard Form of Lease.",
+        "The parties agree not to use the standard lease."
+      ]
+    },
+    {
+      "id": "R03",
+      "title": "A \"no pets\" clause is void",
+      "section": "RTA s. 14 (and s. 76)",
+      "category": "pets",
+      "clause_verdict": "LIKELY_VOID",
+      "summary": "A lease term that bans pets is void. A landlord cannot evict you only because you have a pet. The landlord can apply to the Landlord and Tenant Board if a pet causes serious problems, such as damage, a severe allergy for others, or danger. Condominium rules may be different.",
+      "tenant_tip": "A no-pet clause in a regular rental lease cannot be enforced, but you are responsible if your pet causes damage or danger.",
+      "keywords": [
+        "pets",
+        "no pets",
+        "animals",
+        "dog",
+        "cat",
+        "pet ban"
+      ],
+      "triggers": [
+        "\\bno\\s+(pets?|animals?|dogs?|cats?)\\b",
+        "\\bpets?\\s+(are\\s+)?(not|never)\\s+(allowed|permitted)",
+        "(not|never)\\s+(be\\s+)?(allowed|permitted)\\s+to\\s+(keep|have)\\s+(any\\s+)?(pets?|animals?)",
+        "shall\\s+not\\s+keep\\s+(any\\s+)?(pets?|animals?)",
+        "prohibit\\w*\\s+(all\\s+)?(pets?|animals?)",
+        "(pets?|animals?)\\s+(of\\s+any\\s+kind\\s+)?(are\\s+)?(strictly\\s+)?prohibited"
+      ],
+      "exclude": [],
+      "examples": [
+        "No pets of any kind are allowed in the unit.",
+        "The tenant shall not keep any animals on the premises."
+      ]
+    },
+    {
+      "id": "R04",
+      "title": "Acceleration clauses are void",
+      "section": "RTA s. 15",
+      "category": "rent",
+      "clause_verdict": "LIKELY_VOID",
+      "summary": "A lease cannot say that if you miss or are late with a payment, all the rent for the rest of the lease becomes due right away. That kind of clause is void.",
+      "tenant_tip": "If you are late, the landlord can only ask for the rent that is actually owed, not future rent.",
+      "keywords": [
+        "acceleration",
+        "remaining rent due",
+        "balance of the lease",
+        "all rent due immediately"
+      ],
+      "triggers": [
+        "(entire|all|remaining|whole|balance\\s+of\\s+the)\\s+(of\\s+the\\s+)?(rent|lease|term)\\b.{0,80}\\b(due|payable|owing)\\s+(immediately|at\\s+once|right\\s+away)",
+        "accelerat\\w*",
+        "(remainder|rest|balance)\\s+of\\s+the\\s+(term|lease|tenancy).{0,60}(due|payable|owing).{0,15}(immediately|at\\s+once|right\\s+away)",
+        "(immediately|at\\s+once)\\s+(due|payable).{0,60}(remainder|rest|balance)\\s+of\\s+the\\s+(term|lease|tenancy)"
+      ],
+      "exclude": [],
+      "examples": [
+        "If the tenant misses one payment, the rent for the remainder of the term becomes due immediately.",
+        "All remaining rent under this lease shall be payable at once on any default."
+      ]
+    },
+    {
+      "id": "R05",
+      "title": "Damage, security and pet deposits are not allowed",
+      "section": "RTA s. 105",
+      "category": "deposits",
+      "clause_verdict": "LIKELY_VOID",
+      "summary": "A landlord can only ask for a rent deposit (for the last rent period) and a refundable key deposit. Damage deposits, security deposits, pet deposits and cleaning deposits are not allowed, even if they are refundable.",
+      "tenant_tip": "You do not have to pay a damage, security, pet or cleaning deposit. If you already paid one, you can ask for it back.",
+      "keywords": [
+        "damage deposit",
+        "security deposit",
+        "pet deposit",
+        "cleaning deposit",
+        "deposit for damages"
+      ],
+      "triggers": [
+        "\\b(damage|damages|security|pet|cleaning|guest|furniture)\\s+deposit",
+        "deposit\\s+(for|against|to\\s+cover)\\s+(any\\s+)?(damages?|cleaning|repairs?)"
+      ],
+      "exclude": [],
+      "examples": [
+        "The tenant shall pay a damage deposit of $1,000, refundable at the end of the tenancy.",
+        "A security deposit equal to half a month's rent is required."
+      ]
+    },
+    {
+      "id": "R06",
+      "title": "Rent deposit: at most one month, used for the last month",
+      "section": "RTA s. 106",
+      "category": "deposits",
+      "clause_verdict": "OK",
+      "summary": "A landlord may ask for a rent deposit. It can be no more than one month's rent (or one rent period if rent is paid more often). It must be used for the last month of the tenancy, and the landlord must pay interest on it every year at the rent increase guideline rate.",
+      "tenant_tip": "A last month's rent deposit is normal. The landlord must pay you yearly interest on it.",
+      "keywords": [
+        "last month's rent",
+        "rent deposit",
+        "first and last",
+        "deposit interest"
+      ],
+      "triggers": [
+        "last\\s+month'?s?\\s+rent",
+        "\\brent\\s+deposit",
+        "first\\s+and\\s+last\\s+month"
+      ],
+      "exclude": [],
+      "examples": [
+        "The tenant will pay a rent deposit equal to one month's rent, to be applied to the last month of the tenancy.",
+        "First and last month's rent are due at signing."
+      ]
+    },
+    {
+      "id": "R06X",
+      "title": "Rent deposit cannot be more than one month",
+      "section": "RTA s. 106",
+      "category": "deposits",
+      "clause_verdict": "LIKELY_VOID",
+      "summary": "A rent deposit cannot be more than one month's rent. Asking for two or more months of rent as a deposit, or for many months of rent in advance as a condition of renting, is not allowed.",
+      "tenant_tip": "You do not have to pay more than one month as a rent deposit.",
+      "keywords": [
+        "two months deposit",
+        "months in advance",
+        "advance rent",
+        "extra deposit"
+      ],
+      "triggers": [
+        "\\b(two|three|four|six|twelve|2|3|4|6|12)\\s+months?'?s?\\s+(of\\s+)?rent\\b.{0,50}(deposit|in\\s+advance|upfront|up\\s+front|prepaid)",
+        "(deposit|in\\s+advance|upfront|up\\s+front|prepay\\w*).{0,50}\\b(two|three|four|six|twelve|2|3|4|6|12)\\s+months?'?s?\\s+(of\\s+)?rent"
+      ],
+      "exclude": [],
+      "examples": [
+        "The tenant must pay a deposit equal to two months' rent.",
+        "Three months of rent in advance are required before move-in."
+      ]
+    },
+    {
+      "id": "R07",
+      "title": "A refundable key deposit is allowed",
+      "section": "O. Reg. 516/06, s. 17",
+      "category": "deposits",
+      "clause_verdict": "OK",
+      "summary": "A landlord may charge a refundable key deposit for keys, fobs or access cards. It cannot be more than the expected cost of replacing them, and it must be returned when the keys are returned.",
+      "tenant_tip": "A key deposit is fine if it is refundable and close to the real replacement cost.",
+      "keywords": [
+        "key deposit",
+        "fob deposit",
+        "access card deposit",
+        "keys"
+      ],
+      "triggers": [
+        "\\bkey\\s+deposit",
+        "deposit\\s+for\\s+(the\\s+)?(keys?|fobs?|access\\s+cards?)",
+        "\\b(fob|access\\s+card)\\s+deposit"
+      ],
+      "exclude": [],
+      "examples": [
+        "A refundable key deposit of $50 is required for two keys and one fob.",
+        "The tenant pays a deposit for the access card, returned when the card is returned."
+      ]
+    },
+    {
+      "id": "R08",
+      "title": "Extra fees and penalties are not allowed",
+      "section": "RTA s. 134",
+      "category": "fees",
+      "clause_verdict": "LIKELY_VOID",
+      "summary": "A landlord cannot charge fees, premiums, commissions, bonuses or penalties on top of the lawful rent. Late fees, interest on late rent, application fees, admin fees and move-out cleaning fees are not allowed. One exception: a cheque returned for non-sufficient funds (see the NSF rule).",
+      "tenant_tip": "You do not have to pay late fees or other extra fees. Rent is the only regular charge, plus a limited NSF charge.",
+      "keywords": [
+        "late fee",
+        "penalty",
+        "admin fee",
+        "application fee",
+        "interest on late rent",
+        "cleaning fee",
+        "processing fee"
+      ],
+      "triggers": [
+        "\\blate\\s+(fee|charge|penalty|payment\\s+(fee|charge|penalty))",
+        "\\bpenalty\\b",
+        "\\binterest\\b.{0,40}\\b(late|unpaid|overdue|outstanding)\\s+(rent|amounts?|payments?)",
+        "\\b(admin|administration|administrative|processing|application|cleaning|move-?out|move-?in|renewal|lease\\s+preparation|pet|guest)\\s+fee",
+        "\\$\\s?\\d+(\\.\\d+)?\\s+(per|each|a)\\s+day\\b.{0,40}\\b(late|after)",
+        "\\blate\\b.{0,40}\\b(fees?|charges?|penalty|penalties|surcharges?)\\b",
+        "\\blate\\b.{0,60}\\binterest\\b|\\binterest\\b.{0,60}\\blate\\b"
+      ],
+      "exclude": [
+        "\\bNSF\\b",
+        "non-?sufficient",
+        "returned\\s+cheque",
+        "bounced",
+        "dishonou?red"
+      ],
+      "examples": [
+        "A late fee of $50 will be charged if rent is not received by the 3rd of the month.",
+        "The tenant agrees to pay a non-refundable administration fee of $250 at signing."
+      ]
+    },
+    {
+      "id": "R09",
+      "title": "NSF charge: bank fee plus at most $20",
+      "section": "O. Reg. 516/06, s. 17",
+      "category": "fees",
+      "clause_verdict": "OK",
+      "summary": "If a rent cheque or payment is returned for non-sufficient funds (NSF), the landlord may charge the actual bank fee plus an administration charge of no more than $20.",
+      "tenant_tip": "An NSF charge is allowed, but the landlord's own admin part cannot be more than $20.",
+      "keywords": [
+        "NSF",
+        "returned cheque",
+        "bounced cheque",
+        "non-sufficient funds"
+      ],
+      "triggers": [
+        "\\bNSF\\b",
+        "non-?sufficient\\s+funds",
+        "returned\\s+cheque",
+        "bounced\\s+cheque",
+        "dishonou?red\\s+(cheque|payment)",
+        "cheques?\\s+(bounces?|is\\s+returned|returns|is\\s+dishonou?red)"
+      ],
+      "exclude": [],
+      "examples": [
+        "If a cheque is returned NSF, the tenant pays the bank's charge plus a $20 administration fee.",
+        "Bounced cheques: the tenant will pay the landlord's bank charges and an admin charge of $20."
+      ]
+    },
+    {
+      "id": "R10",
+      "title": "You cannot be forced to give post-dated cheques or automatic payments",
+      "section": "RTA s. 108",
+      "category": "payments",
+      "clause_verdict": "LIKELY_VOID",
+      "summary": "A landlord cannot require the tenant to give post-dated cheques or to set up automatic payments (pre-authorized debits) as a condition of renting. The tenant may choose to do so.",
+      "tenant_tip": "You can choose another reasonable way to pay rent, like e-transfer or a cheque each month.",
+      "keywords": [
+        "post-dated cheques",
+        "pre-authorized debit",
+        "automatic payments",
+        "PAD"
+      ],
+      "triggers": [
+        "(must|shall|required|requires|will)\\b.{0,60}(post-?dated|pre-?authori[sz]ed|automatic\\s+(payments?|withdrawals?|debits?))",
+        "(post-?dated\\s+cheques?|pre-?authori[sz]ed\\s+(debits?|payments?)).{0,40}(are|is)\\s+(mandatory|required)"
+      ],
+      "exclude": [],
+      "examples": [
+        "The tenant must provide twelve post-dated cheques before move-in.",
+        "Rent shall be paid only by pre-authorized debit from the tenant's bank account."
+      ]
+    },
+    {
+      "id": "R11",
+      "title": "Receipts are free",
+      "section": "RTA s. 109",
+      "category": "payments",
+      "clause_verdict": "LIKELY_VOID",
+      "summary": "If the tenant asks, the landlord must give a receipt for rent, deposits or any other payment, free of charge. This also applies to former tenants for up to a year.",
+      "tenant_tip": "Always ask for a receipt. The landlord cannot charge for it.",
+      "keywords": [
+        "receipt",
+        "rent receipt",
+        "proof of payment"
+      ],
+      "triggers": [
+        "receipts?\\b.{0,50}(fee|charge|\\$\\s?\\d)",
+        "(fee|charge|\\$\\s?\\d+).{0,40}\\breceipts?"
+      ],
+      "exclude": [],
+      "examples": [
+        "Rent receipts will be provided for a fee of $10 each.",
+        "A $5 charge applies to each receipt requested."
+      ]
+    },
+    {
+      "id": "R12",
+      "title": "The landlord must repair and maintain the unit",
+      "section": "RTA s. 20",
+      "category": "repairs",
+      "clause_verdict": "LIKELY_VOID",
+      "summary": "The landlord must keep the unit and building in a good state of repair and follow health, safety and housing standards. This is true even if the tenant knew about a problem before signing. A clause that makes the tenant responsible for all repairs or maintenance, or says the unit is rented \"as is\" with no landlord repairs, is void.",
+      "tenant_tip": "Report repairs in writing. Normal repairs and maintenance are the landlord's job.",
+      "keywords": [
+        "repairs",
+        "maintenance",
+        "as is",
+        "tenant responsible for repairs",
+        "appliances broken"
+      ],
+      "triggers": [
+        "tenant\\s+(is\\s+|shall\\s+be\\s+|will\\s+be\\s+)?(solely\\s+|fully\\s+|entirely\\s+)?responsible\\s+for\\s+(all\\s+)?(the\\s+)?(repairs?|maintenance)\\b",
+        "(all\\s+)?(repairs?|maintenance)\\b.{0,50}(at\\s+the\\s+)?tenant'?s\\s+(own\\s+|sole\\s+)?(cost|expense)",
+        "\\bas[- ]is\\b",
+        "landlord\\s+(is\\s+|shall\\s+be\\s+|will\\s+be\\s+)?not\\s+(be\\s+)?responsible\\s+for\\s+(any\\s+)?(repairs?|maintenance)"
+      ],
+      "exclude": [
+        "caused\\s+by\\s+the\\s+tenant",
+        "tenant'?s\\s+(wilful|willful|negligent)",
+        "\\bwilful|\\bwillful|neglig"
+      ],
+      "examples": [
+        "The tenant is responsible for all repairs and maintenance of the unit and appliances.",
+        "The unit is rented as-is and the landlord will not make repairs."
+      ]
+    },
+    {
+      "id": "R13",
+      "title": "Vital services cannot be cut off",
+      "section": "RTA s. 21",
+      "category": "services",
+      "clause_verdict": "LIKELY_VOID",
+      "summary": "A landlord cannot withhold or interfere with vital services or care services that the landlord supplies, such as heat, water, electricity or fuel, including when rent is late.",
+      "tenant_tip": "Your landlord cannot shut off heat, water or electricity to pressure you.",
+      "keywords": [
+        "heat",
+        "water",
+        "electricity",
+        "hydro",
+        "shut off",
+        "vital services"
+      ],
+      "triggers": [
+        "(may|can|will|right\\s+to)\\s+(shut\\s+off|disconnect|cut\\s+off|turn\\s+off|withhold|interrupt|suspend)\\s+(the\\s+)?(heat|water|electricity|hydro|gas|power|utilities)",
+        "(heat|water|electricity|hydro|gas|power|utilities)\\s+(may|can|will)\\s+be\\s+(shut\\s+off|disconnected|cut\\s+off|turned\\s+off|withheld|interrupted|suspended)"
+      ],
+      "exclude": [],
+      "examples": [
+        "The landlord may shut off the heat if rent is more than five days late.",
+        "Utilities can be disconnected by the landlord when the tenant is in arrears."
+      ]
+    },
+    {
+      "id": "R14",
+      "title": "Landlord entry needs 24 hours written notice",
+      "section": "RTA s. 26, s. 27",
+      "category": "entry",
+      "clause_verdict": "LIKELY_VOID",
+      "summary": "Except in an emergency or if the tenant agrees at the time, a landlord must give at least 24 hours written notice before entering. The notice must give the reason and a time between 8 a.m. and 8 p.m. A clause saying the landlord can enter at any time or without notice is void.",
+      "tenant_tip": "Your landlord needs to give 24 hours written notice with a reason, except in emergencies.",
+      "keywords": [
+        "enter",
+        "entry",
+        "access",
+        "inspection",
+        "notice to enter",
+        "privacy"
+      ],
+      "triggers": [
+        "enter\\s+(the\\s+)?(unit|premises|rental\\s+unit|apartment)?\\s*(at\\s+any\\s+time|without\\s+(prior\\s+|any\\s+|advance\\s+)?notice|whenever)",
+        "access\\s+(to\\s+the\\s+(unit|premises)\\s+)?at\\s+any\\s+time",
+        "without\\s+(any\\s+|prior\\s+)?notice.{0,40}\\b(enter|access|inspect)",
+        "\\b(enter|access|inspect)\\w*\\s+(the\\s+)?(unit|premises|rental\\s+unit|apartment)\\s+(at\\s+any\\s+time|without\\s+(prior\\s+|any\\s+|advance\\s+)?notice|whenever)",
+        "\\b(enter|access|inspect)\\w*\\b.{0,40}\\bat\\s+(their|its|his|her|the\\s+landlord'?s)\\s+(sole\\s+)?discretion"
+      ],
+      "exclude": [
+        "emergenc"
+      ],
+      "examples": [
+        "The landlord may enter the unit at any time to inspect.",
+        "The owner can access the premises without notice."
+      ]
+    },
+    {
+      "id": "R15",
+      "title": "The landlord cannot lock you out",
+      "section": "RTA s. 24",
+      "category": "locks",
+      "clause_verdict": "LIKELY_VOID",
+      "summary": "A landlord cannot change the locks or add locks to the unit without giving the tenant a replacement key. Locking a tenant out is only legal with an eviction order enforced by the Sheriff.",
+      "tenant_tip": "Only the Sheriff, with an eviction order, can remove you from your home.",
+      "keywords": [
+        "change the locks",
+        "lock out",
+        "lockout",
+        "locks"
+      ],
+      "triggers": [
+        "(landlord|owner)\\s+(may|can|will|has\\s+the\\s+right\\s+to)\\s+(change|replace)\\s+the\\s+locks?.{0,60}(without|if|when)",
+        "lock\\s+(the\\s+)?tenant\\s+out",
+        "change\\s+the\\s+locks?\\s+(at\\s+any\\s+time|without\\s+(giving|providing|notice))"
+      ],
+      "exclude": [],
+      "examples": [
+        "The landlord may change the locks if rent is not paid on time.",
+        "If the tenant is in arrears, the landlord can lock the tenant out."
+      ]
+    },
+    {
+      "id": "R16",
+      "title": "Your tenancy continues after the lease term",
+      "section": "RTA s. 37, s. 38",
+      "category": "termination",
+      "clause_verdict": "LIKELY_VOID",
+      "summary": "A tenancy only ends in the ways the Act allows. When a fixed-term lease (for example one year) ends, the tenancy usually continues month to month on the same terms. A clause saying the tenant must move out when the lease term ends is void.",
+      "tenant_tip": "You do not have to move out just because the one-year lease ended.",
+      "keywords": [
+        "end of lease",
+        "move out",
+        "vacate",
+        "term ends",
+        "renewal",
+        "month to month"
+      ],
+      "triggers": [
+        "(must|shall|will|agrees?\\s+to)\\s+(vacate|move\\s+out|leave).{0,50}(end|expiry|expiration|conclusion)\\s+of\\s+the\\s+([\\w-]+\\s+){0,2}(lease|term|tenancy)",
+        "lease\\s+(automatically\\s+)?(ends|terminates|expires).{0,60}(must|shall|will)\\s+(vacate|move)",
+        "\\bno\\s+(automatic\\s+)?renewal\\b.{0,60}(vacate|move\\s+out)"
+      ],
+      "exclude": [],
+      "examples": [
+        "The tenant must vacate the unit at the end of the one-year term.",
+        "This lease automatically terminates on August 31 and the tenant shall move out."
+      ]
+    },
+    {
+      "id": "R17",
+      "title": "Tenant's notice to end a monthly tenancy is 60 days",
+      "section": "RTA s. 44, s. 47",
+      "category": "termination",
+      "clause_verdict": "REVIEW",
+      "summary": "For a monthly tenancy, the tenant must give at least 60 days written notice, and the end date must be the last day of a rental period (and not before the end of a fixed term). A lease that asks for longer notice from the tenant should be checked, because the Act sets the notice rules.",
+      "tenant_tip": "In a monthly tenancy, 60 days written notice ending on the last day of a month is usually enough.",
+      "keywords": [
+        "notice to terminate",
+        "60 days",
+        "90 days notice",
+        "end the tenancy",
+        "tenant notice"
+      ],
+      "triggers": [
+        "tenant\\s+(must|shall|will)\\s+(give|provide)\\s+(at\\s+least\\s+)?(90|ninety|120|one\\s+hundred|three\\s+months|four\\s+months)",
+        "\\b(90|ninety|120)\\s+days'?\\s+(written\\s+)?notice\\s+(to\\s+|before\\s+|of\\s+)?(terminate|end|vacate|move|leaving)"
+      ],
+      "exclude": [],
+      "examples": [
+        "The tenant must give 90 days written notice to end the tenancy.",
+        "Tenant shall provide three months notice before moving out."
+      ]
+    },
+    {
+      "id": "R18",
+      "title": "Rent increases: once a year, 90 days notice",
+      "section": "RTA s. 116, s. 119, s. 120",
+      "category": "rent",
+      "clause_verdict": "LIKELY_VOID",
+      "summary": "Rent can usually go up only once every 12 months, and only with at least 90 days written notice. For most units first occupied before November 15, 2018, the increase cannot be more than the yearly guideline set by Ontario, unless the Landlord and Tenant Board approves more. A clause allowing increases at any time or with short notice is void.",
+      "tenant_tip": "Check that a rent increase comes with 90 days written notice and is at least 12 months after the last one.",
+      "keywords": [
+        "rent increase",
+        "raise rent",
+        "guideline",
+        "12 months",
+        "90 days notice"
+      ],
+      "triggers": [
+        "(increase|raise|adjust)\\s+(the\\s+)?rent\\s+(at\\s+any\\s+time|whenever|every\\s+(month|six\\s+months|3\\s+months|three\\s+months|quarter)|without\\s+notice|with\\s+(30|thirty|60|sixty)\\s+days)",
+        "rent\\s+(may|will|shall)\\s+(increase|go\\s+up|be\\s+increased)\\s+(by\\s+\\S+\\s+)?(every|each)\\s+(month|six\\s+months|quarter|three\\s+months)",
+        "\\b(30|thirty|60|sixty)\\s+days'?\\s+(written\\s+)?notice\\s+of\\s+(any\\s+|a\\s+)?rent\\s+increase"
+      ],
+      "exclude": [],
+      "examples": [
+        "The landlord may increase the rent at any time with 30 days notice.",
+        "Rent will go up by 5% every six months."
+      ]
+    },
+    {
+      "id": "R19",
+      "title": "You can ask to assign or sublet",
+      "section": "RTA s. 95, s. 97",
+      "category": "assignment",
+      "clause_verdict": "LIKELY_VOID",
+      "summary": "A tenant may assign the lease or sublet the unit with the landlord's consent. For subletting, the landlord cannot refuse consent arbitrarily or unreasonably. A clause that bans assigning or subletting in all cases conflicts with the Act.",
+      "tenant_tip": "Ask in writing. If the landlord refuses an assignment, you may be able to end your tenancy instead.",
+      "keywords": [
+        "sublet",
+        "assign",
+        "assignment",
+        "subtenant",
+        "sublease"
+      ],
+      "triggers": [
+        "\\b(no|never)\\s+(assign\\w*|sublet\\w*|sub-let\\w*|subleas\\w*)",
+        "(assign\\w*|sublet\\w*|subleas\\w*).{0,40}(strictly\\s+)?(prohibited|forbidden|not\\s+(be\\s+)?(allowed|permitted))",
+        "shall\\s+not\\s+(assign|sublet|sublease).{0,80}(under\\s+any\\s+circumstances|for\\s+any\\s+reason|at\\s+all)",
+        "(may|shall|must|will)\\s+not\\s+(assign|sublet|sublease|sub-let)\\w*\\b"
+      ],
+      "exclude": [
+        "without\\s+(the\\s+)?(landlord'?s\\s+)?(prior\\s+)?(written\\s+)?consent",
+        "consent\\s+(which|that)\\s+(will|shall)\\s+not\\s+be\\s+(arbitrarily\\s+or\\s+)?unreasonabl"
+      ],
+      "examples": [
+        "Subletting is strictly prohibited under any circumstances.",
+        "The tenant shall not assign this lease for any reason."
+      ]
+    },
+    {
+      "id": "R20",
+      "title": "The landlord cannot seize your belongings",
+      "section": "RTA s. 40",
+      "category": "termination",
+      "clause_verdict": "LIKELY_VOID",
+      "summary": "A landlord cannot take, keep or sell a tenant's belongings because of unpaid rent or other debts. This old remedy (called distress) is abolished in Ontario.",
+      "tenant_tip": "Your belongings are yours. Unpaid rent goes through the Landlord and Tenant Board.",
+      "keywords": [
+        "seize",
+        "belongings",
+        "property",
+        "furniture",
+        "lien",
+        "distress"
+      ],
+      "triggers": [
+        "(seize|take|keep|hold|retain|sell|dispose\\s+of)\\s+(any\\s+of\\s+)?(the\\s+)?tenant'?s\\s+(belongings|property|possessions|furniture|goods|personal\\s+property)",
+        "lien\\s+(on|against)\\s+(the\\s+)?tenant"
+      ],
+      "exclude": [],
+      "examples": [
+        "If rent is unpaid, the landlord may seize the tenant's belongings.",
+        "The landlord has a lien on the tenant's furniture until all rent is paid."
+      ]
+    },
+    {
+      "id": "R21",
+      "title": "Guests and reasonable enjoyment",
+      "section": "RTA s. 22, s. 23, s. 134",
+      "category": "enjoyment",
+      "clause_verdict": "REVIEW",
+      "summary": "A landlord must not substantially interfere with the tenant's reasonable enjoyment of the unit, and must not harass the tenant. Strict limits on normal guests may conflict with this. Charging a fee for guests is an extra charge that is not allowed.",
+      "tenant_tip": "Normal visits from guests are part of enjoying your home. Guest fees are not allowed.",
+      "keywords": [
+        "guests",
+        "visitors",
+        "overnight guests",
+        "reasonable enjoyment",
+        "harassment"
+      ],
+      "triggers": [
+        "\\bno\\s+(overnight\\s+)?(guests|visitors)\\b",
+        "(guests|visitors)\\s+(are\\s+)?(not\\s+(allowed|permitted)|prohibited)",
+        "(fee|charge|\\$\\s?\\d+).{0,40}\\b(guests?|visitors?)\\b",
+        "\\b(guests?|visitors?)\\b.{0,60}(more\\s+than|longer\\s+than|maximum\\s+of)\\s+\\w+\\s+(nights?|days?)"
+      ],
+      "exclude": [],
+      "examples": [
+        "No overnight guests are permitted.",
+        "Guests staying more than two nights will be charged $25 per night."
+      ]
+    },
+    {
+      "id": "A01",
+      "title": "Tenant insurance can be required",
+      "section": "Standard Form of Lease (tenant's insurance)",
+      "category": "allowed",
+      "clause_verdict": "OK",
+      "summary": "A lease can require the tenant to have tenant (renter's) insurance, including liability coverage, and to show proof of it.",
+      "tenant_tip": "Tenant insurance is a common, allowed requirement and protects your own belongings too.",
+      "keywords": [
+        "tenant insurance",
+        "renter's insurance",
+        "liability insurance",
+        "contents insurance"
+      ],
+      "triggers": [
+        "(tenant'?s?|renter'?s?|contents|liability)\\s+insurance"
+      ],
+      "exclude": [],
+      "examples": [
+        "The tenant must have tenant insurance with liability coverage and provide proof to the landlord.",
+        "Renter's insurance is required for the whole tenancy."
+      ]
+    },
+    {
+      "id": "A02",
+      "title": "Smoking rules are allowed",
+      "section": "Standard Form of Lease (smoking)",
+      "category": "allowed",
+      "clause_verdict": "OK",
+      "summary": "A lease can include rules about smoking or vaping in the unit and on the property, as long as they are written in the lease.",
+      "tenant_tip": "Follow the smoking rules you agreed to in the lease.",
+      "keywords": [
+        "smoking",
+        "no smoking",
+        "vaping",
+        "cannabis"
+      ],
+      "triggers": [
+        "\\bsmok\\w*",
+        "\\bvap(e|ing)\\b",
+        "\\bcannabis\\b"
+      ],
+      "exclude": [],
+      "examples": [
+        "Smoking is not permitted anywhere inside the unit or on the balcony.",
+        "No vaping or cannabis smoking in the building."
+      ]
+    },
+    {
+      "id": "A03",
+      "title": "Who pays which utilities can be agreed",
+      "section": "Standard Form of Lease (services and utilities)",
+      "category": "allowed",
+      "clause_verdict": "OK",
+      "summary": "The lease can say which utilities and services are included in the rent and which ones the tenant pays separately, such as hydro, gas, water or internet.",
+      "tenant_tip": "Know which utilities you pay before you sign, so your monthly cost is clear.",
+      "keywords": [
+        "utilities",
+        "hydro",
+        "electricity",
+        "gas",
+        "water",
+        "internet",
+        "included in rent"
+      ],
+      "triggers": [
+        "(tenant|landlord)\\s+(is\\s+responsible\\s+for|shall\\s+pay|will\\s+pay|pays)\\s+(for\\s+)?(the\\s+)?(hydro|electricity|gas|water|internet|utilities|heat)",
+        "(utilities|hydro|heat|water|internet)\\s+(is\\s+|are\\s+)?(included|not\\s+included)"
+      ],
+      "exclude": [],
+      "examples": [
+        "The tenant pays for hydro and internet. Heat and water are included in the rent.",
+        "Utilities are not included in the rent."
+      ]
+    },
+    {
+      "id": "A04",
+      "title": "Tenant keeps the unit clean",
+      "section": "RTA s. 33",
+      "category": "allowed",
+      "clause_verdict": "OK",
+      "summary": "The tenant is responsible for ordinary cleanliness of the unit, except for any cleaning the lease says the landlord will do.",
+      "tenant_tip": "Normal cleaning is your job; you do not need to pay a cleaning fee.",
+      "keywords": [
+        "clean",
+        "cleanliness",
+        "tidy",
+        "garbage"
+      ],
+      "triggers": [
+        "ordinary\\s+cleanliness",
+        "keep\\s+the\\s+(unit|premises|apartment)\\s+(clean|in\\s+a\\s+clean)",
+        "\\bclean\\s+condition\\b"
+      ],
+      "exclude": [],
+      "examples": [
+        "The tenant will keep the unit in a clean condition.",
+        "The tenant is responsible for ordinary cleanliness of the rental unit."
+      ]
+    },
+    {
+      "id": "A05",
+      "title": "Tenant pays for damage they cause",
+      "section": "RTA s. 34",
+      "category": "allowed",
+      "clause_verdict": "OK",
+      "summary": "The tenant is responsible for repairing undue damage to the unit or building caused by the wilful or negligent conduct of the tenant, their guests or other people living in the unit.",
+      "tenant_tip": "You pay for damage you or your guests cause on purpose or by carelessness, not for normal wear and tear.",
+      "keywords": [
+        "damage caused by tenant",
+        "negligent",
+        "wilful",
+        "undue damage",
+        "wear and tear"
+      ],
+      "triggers": [
+        "damage\\s+(caused|done)\\s+by\\s+the\\s+tenant",
+        "(wilful|willful|negligen\\w*)\\b.{0,60}\\bdamage",
+        "\\bdamage\\b.{0,60}\\b(wilful|willful|negligen\\w*)"
+      ],
+      "exclude": [],
+      "examples": [
+        "The tenant will pay for any damage caused by the tenant's wilful or negligent conduct.",
+        "Damage done by the tenant or guests must be repaired at the tenant's cost."
+      ]
+    },
+    {
+      "id": "A06",
+      "title": "Rent amount and due date",
+      "section": "Standard Form of Lease (rent)",
+      "category": "allowed",
+      "clause_verdict": "OK",
+      "summary": "The lease states the monthly rent, what it includes, and the day it is due (usually the first day of the month).",
+      "tenant_tip": "Pay rent on time and keep receipts.",
+      "keywords": [
+        "rent",
+        "monthly rent",
+        "due date",
+        "first day of the month"
+      ],
+      "triggers": [
+        "\\brent\\s+(of|is|will\\s+be|shall\\s+be|amount\\s+is)\\s+\\$\\s?\\d",
+        "\\brent\\s+(is|shall\\s+be)\\s+(due|payable)\\s+on\\s+the\\s+(first|1st)"
+      ],
+      "exclude": [],
+      "examples": [
+        "The rent is $2,100 per month, due on the first day of each month.",
+        "Rent shall be payable on the 1st of every month."
+      ]
+    },
+    {
+      "id": "A07",
+      "title": "Entry with 24 hours written notice is fine",
+      "section": "RTA s. 27",
+      "category": "allowed",
+      "clause_verdict": "OK",
+      "summary": "A clause that says the landlord will give at least 24 hours written notice, with the reason, and enter between 8 a.m. and 8 p.m., follows the law.",
+      "tenant_tip": "This is the normal entry rule.",
+      "keywords": [
+        "24 hours notice",
+        "written notice",
+        "8 a.m. to 8 p.m."
+      ],
+      "triggers": [
+        "24\\s+hours'?\\s+(written\\s+|advance\\s+)?notice",
+        "between\\s+8\\s*(a\\.?m\\.?|am)\\s+and\\s+8\\s*(p\\.?m\\.?|pm)"
+      ],
+      "exclude": [],
+      "examples": [
+        "The landlord will give 24 hours written notice before entering, between 8 a.m. and 8 p.m.",
+        "Entry for repairs requires 24 hours advance notice."
+      ]
+    },
+    {
+      "id": "A08",
+      "title": "Tenant needs consent to change locks",
+      "section": "RTA s. 35",
+      "category": "allowed",
+      "clause_verdict": "OK",
+      "summary": "A tenant cannot change or add locks to the unit without the landlord's consent.",
+      "tenant_tip": "Ask before changing locks.",
+      "keywords": [
+        "tenant change locks",
+        "consent",
+        "locks"
+      ],
+      "triggers": [
+        "tenant\\s+(shall|must|will|may)\\s+not\\s+(change|alter|add|replace)(\\s+or\\s+(change|alter|add|replace))?\\s+(the\\s+|any\\s+)?(new\\s+)?locks?"
+      ],
+      "exclude": [],
+      "examples": [
+        "The tenant shall not change the locks without the landlord's written consent."
+      ]
+    },
+    {
+      "id": "A09",
+      "title": "60 days notice from the tenant is the normal rule",
+      "section": "RTA s. 44, s. 47",
+      "category": "allowed",
+      "clause_verdict": "OK",
+      "summary": "A clause asking the tenant for 60 days written notice to end a monthly tenancy follows the law.",
+      "tenant_tip": "Give notice in writing, at least 60 days before the last day of a month.",
+      "keywords": [
+        "60 days notice",
+        "sixty days",
+        "notice to end"
+      ],
+      "triggers": [
+        "\\b(60|sixty)\\s+days'?\\s+(written\\s+)?notice"
+      ],
+      "exclude": [],
+      "examples": [
+        "Either the tenant gives 60 days written notice to end the tenancy at the end of a month."
+      ]
+    },
+    {
+      "id": "A10",
+      "title": "Subletting with the landlord's consent is fine",
+      "section": "RTA s. 95, s. 97",
+      "category": "allowed",
+      "clause_verdict": "OK",
+      "summary": "A clause saying the tenant may assign or sublet only with the landlord's consent, which will not be unreasonably refused, follows the law.",
+      "tenant_tip": "Ask for consent in writing.",
+      "keywords": [
+        "sublet with consent",
+        "assign with consent"
+      ],
+      "triggers": [
+        "(assign|sublet|sublease)\\w*.{0,80}\\bconsent"
+      ],
+      "exclude": [],
+      "examples": [
+        "The tenant may sublet the unit only with the landlord's written consent, which will not be unreasonably withheld."
+      ]
+    }
+  ]
+}

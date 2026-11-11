@@ -1,0 +1,20 @@
+{
+  "_note": "Held-out clause set, written BEFORE the eval-driven pattern fixes and never used to tune them. It shows how the rules-only mode handles brand-new wording.",
+  "clauses": [
+    {"id": "h01", "text": "Tenant must leave a $500 deposit to cover any damage.", "rule": "R05", "verdict": "LIKELY_VOID"},
+    {"id": "h02", "text": "Cats and dogs are forbidden in this building.", "rule": "R03", "verdict": "LIKELY_VOID"},
+    {"id": "h03", "text": "A $35 charge applies to rent paid after the due date.", "rule": "R08", "verdict": "LIKELY_VOID"},
+    {"id": "h04", "text": "Landlord may come in to inspect whenever he chooses, with no notice.", "rule": "R14", "verdict": "LIKELY_VOID"},
+    {"id": "h05", "text": "Tenant agrees to set up automatic monthly withdrawals for rent.", "rule": "R10", "verdict": "LIKELY_VOID"},
+    {"id": "h06", "text": "Rent may be increased with sixty days' notice.", "rule": "R18", "verdict": "LIKELY_VOID"},
+    {"id": "h07", "text": "Tenant is responsible for fixing all appliances and plumbing problems.", "rule": "R12", "verdict": "LIKELY_VOID"},
+    {"id": "h08", "text": "Overnight visitors are limited to two nights per week.", "rule": "R21", "verdict": "REVIEW"},
+    {"id": "h09", "text": "Tenant shall pay for hydro and gas.", "rule": "A03", "verdict": "OK"},
+    {"id": "h10", "text": "A refundable deposit of $25 per key is required.", "rule": "R07", "verdict": "OK"},
+    {"id": "h11", "text": "Tenant to carry contents and liability insurance.", "rule": "A01", "verdict": "OK"},
+    {"id": "h12", "text": "Tenant will reimburse the landlord for damage caused by tenant's guests.", "rule": "A05", "verdict": "OK"},
+    {"id": "h13", "text": "The building has a laundry room on the ground floor.", "rule": null, "verdict": "OK"},
+    {"id": "h14", "text": "Tenant must vacate on or before the last day of the term.", "rule": "R16", "verdict": "LIKELY_VOID"},
+    {"id": "h15", "text": "Any NSF payment will result in a $45 administration fee.", "rule": "R09", "verdict": "LIKELY_VOID"}
+  ]
+}
